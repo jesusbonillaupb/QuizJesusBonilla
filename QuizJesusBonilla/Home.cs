@@ -69,6 +69,7 @@ namespace QuizJesusBonilla
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string respuesta = "";
             DateTimePicker date = datFechaViaje;
             var a = txtNombre.Text;
             var h = radGeneroH.Checked;
@@ -77,24 +78,26 @@ namespace QuizJesusBonilla
             var d = cmbDestino.Text;
             var f=  numEdad.Text;
             var t = lstClase.Text;
-            
+            var g = "";
             var c = date.Value.Date.ToString("dd/MM/yyyy");
             if (h) {
-                rtbDatos.Text = "hombre";
+                g="hombre";
 
             }
             if (m)
             {
-                rtbDatos.Text = "mujer";
+                g = "mujer";
 
             }
             if (o)
             {
-                rtbDatos.Text = "otro";
+                g = "hombre";
 
             }
-            rtbDatos.Text = a + ", "+ rtbDatos.Text + ", edad= " + f + " años, con " + " destino a " + d +" en "+ t+" el "+c;
+            respuesta = a + ", "+ g + ", edad= " + f + " años, con " + " destino a " + d +" en "+ t+" el "+c;
             
+            respuesta = respuesta + "\n";
+            rtbDatos.Text =rtbDatos.Text + respuesta;
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
