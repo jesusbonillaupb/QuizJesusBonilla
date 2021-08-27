@@ -17,7 +17,52 @@ namespace QuizJesusBonilla
             InitializeComponent();
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAction_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstAparatos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numEdad_ValueChanged(object sender, EventArgs e)
         {
 
         }
