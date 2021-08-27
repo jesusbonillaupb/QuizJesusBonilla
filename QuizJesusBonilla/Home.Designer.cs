@@ -35,16 +35,14 @@ namespace QuizJesusBonilla
             this.lblDestino = new System.Windows.Forms.Label();
             this.cmbDestino = new System.Windows.Forms.ComboBox();
             this.lstClase = new System.Windows.Forms.ListBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datFechaViaje = new System.Windows.Forms.DateTimePicker();
             this.numEdad = new System.Windows.Forms.NumericUpDown();
             this.radGeneroH = new System.Windows.Forms.RadioButton();
             this.radGeneroM = new System.Windows.Forms.RadioButton();
-            this.chePasaje = new System.Windows.Forms.CheckBox();
             this.lblClase = new System.Windows.Forms.Label();
             this.radGeneroO = new System.Windows.Forms.RadioButton();
             this.lblGenero = new System.Windows.Forms.Label();
             this.lblEdad = new System.Windows.Forms.Label();
-            this.lblPasaje = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).BeginInit();
@@ -54,7 +52,7 @@ namespace QuizJesusBonilla
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(220, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(170, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(393, 25);
             this.lblTitulo.TabIndex = 0;
@@ -93,6 +91,19 @@ namespace QuizJesusBonilla
             // cmbDestino
             // 
             this.cmbDestino.FormattingEnabled = true;
+            this.cmbDestino.Items.AddRange(new object[] {
+            "",
+            "Chile",
+            "Paraguay",
+            "Peru",
+            "Ecuador",
+            "Puerto rico",
+            "Argetina",
+            "El salvador",
+            "Estados unidos",
+            "Mexico",
+            "Canada",
+            "Venezuela"});
             this.cmbDestino.Location = new System.Drawing.Point(43, 191);
             this.cmbDestino.Name = "cmbDestino";
             this.cmbDestino.Size = new System.Drawing.Size(181, 21);
@@ -113,17 +124,18 @@ namespace QuizJesusBonilla
             this.lstClase.TabIndex = 5;
             this.lstClase.SelectedIndexChanged += new System.EventHandler(this.lstAparatos_SelectedIndexChanged);
             // 
-            // dateTimePicker1
+            // datFechaViaje
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(468, 126);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 6;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.datFechaViaje.Location = new System.Drawing.Point(467, 192);
+            this.datFechaViaje.Name = "datFechaViaje";
+            this.datFechaViaje.Size = new System.Drawing.Size(200, 20);
+            this.datFechaViaje.TabIndex = 6;
+            this.datFechaViaje.Value = new System.DateTime(2021, 8, 26, 0, 0, 0, 0);
+            this.datFechaViaje.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // numEdad
             // 
-            this.numEdad.Location = new System.Drawing.Point(468, 64);
+            this.numEdad.Location = new System.Drawing.Point(508, 94);
             this.numEdad.Name = "numEdad";
             this.numEdad.Size = new System.Drawing.Size(120, 20);
             this.numEdad.TabIndex = 7;
@@ -150,16 +162,6 @@ namespace QuizJesusBonilla
             this.radGeneroM.TabStop = true;
             this.radGeneroM.Text = "Mujer";
             this.radGeneroM.UseVisualStyleBackColor = true;
-            // 
-            // chePasaje
-            // 
-            this.chePasaje.AutoSize = true;
-            this.chePasaje.Location = new System.Drawing.Point(484, 206);
-            this.chePasaje.Name = "chePasaje";
-            this.chePasaje.Size = new System.Drawing.Size(129, 17);
-            this.chePasaje.TabIndex = 10;
-            this.chePasaje.Text = "pasaje de ida y vuelta";
-            this.chePasaje.UseVisualStyleBackColor = true;
             // 
             // lblClase
             // 
@@ -196,27 +198,17 @@ namespace QuizJesusBonilla
             // 
             this.lblEdad.AutoSize = true;
             this.lblEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(464, 41);
+            this.lblEdad.Location = new System.Drawing.Point(504, 64);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(140, 20);
             this.lblEdad.TabIndex = 14;
             this.lblEdad.Text = "Selecione su edad";
             // 
-            // lblPasaje
-            // 
-            this.lblPasaje.AutoSize = true;
-            this.lblPasaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasaje.Location = new System.Drawing.Point(387, 171);
-            this.lblPasaje.Name = "lblPasaje";
-            this.lblPasaje.Size = new System.Drawing.Size(363, 15);
-            this.lblPasaje.TabIndex = 15;
-            this.lblPasaje.Text = "En caso de que su pasaje sea de ida y vuelta marque esta opcion";
-            // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(464, 91);
+            this.lblFecha.Location = new System.Drawing.Point(504, 168);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(109, 20);
             this.lblFecha.TabIndex = 16;
@@ -224,7 +216,7 @@ namespace QuizJesusBonilla
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(300, 415);
+            this.btnSave.Location = new System.Drawing.Point(349, 392);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 17;
@@ -239,16 +231,14 @@ namespace QuizJesusBonilla
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblFecha);
-            this.Controls.Add(this.lblPasaje);
             this.Controls.Add(this.lblEdad);
             this.Controls.Add(this.lblGenero);
             this.Controls.Add(this.radGeneroO);
             this.Controls.Add(this.lblClase);
-            this.Controls.Add(this.chePasaje);
             this.Controls.Add(this.radGeneroM);
             this.Controls.Add(this.radGeneroH);
             this.Controls.Add(this.numEdad);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.datFechaViaje);
             this.Controls.Add(this.lstClase);
             this.Controls.Add(this.cmbDestino);
             this.Controls.Add(this.lblDestino);
@@ -272,16 +262,14 @@ namespace QuizJesusBonilla
         private System.Windows.Forms.Label lblDestino;
         private System.Windows.Forms.ComboBox cmbDestino;
         private System.Windows.Forms.ListBox lstClase;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datFechaViaje;
         private System.Windows.Forms.NumericUpDown numEdad;
         private System.Windows.Forms.RadioButton radGeneroH;
         private System.Windows.Forms.RadioButton radGeneroM;
-        private System.Windows.Forms.CheckBox chePasaje;
         private System.Windows.Forms.Label lblClase;
         private System.Windows.Forms.RadioButton radGeneroO;
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.Label lblEdad;
-        private System.Windows.Forms.Label lblPasaje;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnSave;
     }
