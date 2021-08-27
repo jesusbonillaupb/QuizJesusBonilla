@@ -46,6 +46,7 @@ namespace QuizJesusBonilla
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.rtbDatos = new System.Windows.Forms.RichTextBox();
+            this.btnReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -235,12 +236,23 @@ namespace QuizJesusBonilla
             this.rtbDatos.TabIndex = 18;
             this.rtbDatos.Text = "";
             // 
+            // btnReport
+            // 
+            this.btnReport.Location = new System.Drawing.Point(488, 415);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(75, 23);
+            this.btnReport.TabIndex = 19;
+            this.btnReport.Text = "Reporte";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(847, 450);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.rtbDatos);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblFecha);
@@ -286,5 +298,6 @@ namespace QuizJesusBonilla
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.RichTextBox rtbDatos;
+        private System.Windows.Forms.Button btnReport;
     }
 }

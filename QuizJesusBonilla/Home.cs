@@ -98,6 +98,7 @@ namespace QuizJesusBonilla
             
             respuesta = respuesta + "\n";
             rtbDatos.Text =rtbDatos.Text + respuesta;
+            
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -107,6 +108,18 @@ namespace QuizJesusBonilla
 
         private void radGeneroH_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+
+
+            Report enviar = new Report();
+
+            enviar.rtbReport.Text = rtbDatos.Text;
+            enviar.Show();
+
 
         }
     }
