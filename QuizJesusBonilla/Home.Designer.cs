@@ -45,6 +45,7 @@ namespace QuizJesusBonilla
             this.lblEdad = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.rtbDatos = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +77,7 @@ namespace QuizJesusBonilla
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(247, 24);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblDestino
             // 
@@ -151,6 +153,7 @@ namespace QuizJesusBonilla
             this.radGeneroH.TabStop = true;
             this.radGeneroH.Text = "Hombre";
             this.radGeneroH.UseVisualStyleBackColor = true;
+            this.radGeneroH.CheckedChanged += new System.EventHandler(this.radGeneroH_CheckedChanged);
             // 
             // radGeneroM
             // 
@@ -216,19 +219,29 @@ namespace QuizJesusBonilla
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(349, 392);
+            this.btnSave.Location = new System.Drawing.Point(348, 415);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "guardar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // rtbDatos
+            // 
+            this.rtbDatos.Location = new System.Drawing.Point(303, 227);
+            this.rtbDatos.Name = "rtbDatos";
+            this.rtbDatos.Size = new System.Drawing.Size(532, 142);
+            this.rtbDatos.TabIndex = 18;
+            this.rtbDatos.Text = "";
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(847, 450);
+            this.Controls.Add(this.rtbDatos);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblEdad);
@@ -272,5 +285,6 @@ namespace QuizJesusBonilla
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.RichTextBox rtbDatos;
     }
 }
